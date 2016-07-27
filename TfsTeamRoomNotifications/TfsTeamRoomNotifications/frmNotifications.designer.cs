@@ -42,6 +42,7 @@
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.contextTrayMenu.SuspendLayout();
             this.menuNotifications.SuspendLayout();
             this.SuspendLayout();
@@ -53,19 +54,19 @@
             this.addRoomToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextTrayMenu.Name = "contextTrayMenu";
-            this.contextTrayMenu.Size = new System.Drawing.Size(157, 56);
+            this.contextTrayMenu.Size = new System.Drawing.Size(151, 52);
             // 
             // addRoomToolStripMenuItem
             // 
             this.addRoomToolStripMenuItem.Name = "addRoomToolStripMenuItem";
-            this.addRoomToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.addRoomToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
             this.addRoomToolStripMenuItem.Text = "Add Room";
             this.addRoomToolStripMenuItem.Click += new System.EventHandler(this.addRoomToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
@@ -149,11 +150,22 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(598, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(195, 56);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "test data check";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmNotifications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 367);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblInitialInfo);
             this.Controls.Add(this.menuNotifications);
             this.MainMenuStrip = this.menuNotifications;
@@ -186,6 +198,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 

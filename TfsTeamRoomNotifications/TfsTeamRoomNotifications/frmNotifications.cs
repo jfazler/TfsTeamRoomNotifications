@@ -18,6 +18,8 @@ namespace TfsTeamRoomNotifications
         private const int minInterval = 15000;
         private const int maxInterval = 60000;
 
+        private TfsRoom tfsRoom = new TfsRoom();
+
         public frmNotifications()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace TfsTeamRoomNotifications
         // TODO -- remove -- testing with random notifications
         private void _timer_Tick(object sender, EventArgs e)
         {
-            notifyIconTrayMenu.ShowBalloonTip(1000, "Title here", "popup info here", ToolTipIcon.Info);
+            check();
         }
 
         private void frmTray_Move(object sender, EventArgs e)
@@ -54,6 +56,16 @@ namespace TfsTeamRoomNotifications
                 // TODO -- remove -- testing with random notifications
                 _timer.Stop();
             }
+        }
+
+        private void check()
+        {
+            if (!tfsRoom.busy)
+            {
+                tfsRoom.checkData().ContinueWith(
+                    t => notifyIconTrayMenu.ShowBalloonTip(1000, "Title here", string.Concat("Message:", t.Result), ToolTipIcon.Info));
+            }
+
         }
 
         private void hideApplication()
@@ -96,6 +108,11 @@ namespace TfsTeamRoomNotifications
         {
             // TODO - display about information
             MessageBox.Show("About information not added yet.");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            check();
         }
 
         #endregion Basic Event Handlers

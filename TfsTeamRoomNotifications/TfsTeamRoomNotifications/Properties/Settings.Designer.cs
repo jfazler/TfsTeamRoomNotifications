@@ -8,23 +8,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TfsTeamRoomNotifications.Properties
-{
-
-
-   [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-   [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-   internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-   {
-
-      private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-      public static Settings Default
-      {
-         get
-         {
-            return defaultInstance;
-         }
-      }
-   }
+namespace TfsTeamRoomNotifications.Properties {
+    
+    
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string VstsProject {
+            get {
+                return ((string)(this["VstsProject"]));
+            }
+            set {
+                this["VstsProject"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PersonalAccessToken {
+            get {
+                return ((string)(this["PersonalAccessToken"]));
+            }
+            set {
+                this["PersonalAccessToken"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.ArrayList Rooms {
+            get {
+                return ((global::System.Collections.ArrayList)(this["Rooms"]));
+            }
+            set {
+                this["Rooms"] = value;
+            }
+        }
+    }
 }
